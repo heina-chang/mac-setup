@@ -1,1 +1,3 @@
 choco install -y wsl-ubuntu-1804
+cinst SublimeText3
+choco list --local-only
