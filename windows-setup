@@ -10,3 +10,4 @@ cinst jdk8
 cinst -y docker-desktop
 #https://techcommunity.microsoft.com/t5/ITOps-Talk-Blog/Step-By-Step-Enabling-Hyper-V-for-use-on-Windows-10/ba-p/267945
 netcfg -d # not sure if this is needed
+cinst -y oracle-sql-developer --params "'/Username:heinachang /Password:xxxx'"
