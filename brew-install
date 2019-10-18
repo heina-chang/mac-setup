@@ -32,7 +32,7 @@ sdk install gradle
 echo 'org.gradle.daemon=true' >> ~/.gradle/gradle.properties
 sdk install scala
 sdk install sbt
-sdk install java 8.0.212-zulu
+sdk install java 8.0.232-zulu
 
 # GIT
 brew install git
