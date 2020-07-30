@@ -1,0 +1,51 @@
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew cask install iterm2
+
+
+toolbox install brazilcli
+brew install git
+
+grep .toolbox ~/.bash_profile || echo 'export PATH=$HOME/.toolbox/bin:$PATH' >> ~/.bash_profile && source ~/.bash_profile
+
+toolbox install cr
+sysctl kern.maxfiles
+  
+brew install pyenv xz
+python-build 3.6.10 ~/.runtimes/Python36
+python-build 3.7.7 ~/.runtimes/Python37
+python-build 3.8.3 ~/.runtimes/Python38
+xcode-select --install
+brew install rbenv libyaml libffi
+ruby-build 2.7.1 ~/.runtimes/Ruby27x
+
+#install java is skipped here please refer to doc
+#https://builderhub.corp.amazon.com/docs/brazil/cli-guide/setup-macos.html
+  
+# NODE with chromedriver for web tests
+brew install nvm
+# Set up the working directory
+mkdir ~/.nvm
+# Set up paths, also add these to your .bash_profile
+echo 'export NVM_DIR=~/.nvm' >> ~/.bash_profile
+echo 'source $(brew --prefix nvm)/nvm.sh' >> ~/.bash_profile
+# install the desired version of NodeJS
+nvm install 10
+
+
+# case senstive and encrypted volume
+cd ~
+git clone ssh://git.amazon.com/pkg/MacOSEncryptedVolumeTools
+MacOSEncryptedVolumeTools/bin/create-encrypted-apfs-volume workplace
+MacOSEncryptedVolumeTools/bin/create-encrypted-apfs-volume brazil-pkg-cache
+brazil prefs --global --key packagecache.cacheRoot --value /Volumes/brazil-pkg-cache/
+ln -s /Volumes/workplace ~/workplace
+rm -rf MacOSEncryptedVolumeTools
+
+# to verify or use disk utility
+diskutil list
+
+#IDE
+# custom IntelliJ IDEA properties
+#echo 'idea.case.sensitive.fs=true' >> ~/Library/Preferences/IntelliJIdea2019.3/idea.properties
