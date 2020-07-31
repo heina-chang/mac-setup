@@ -48,3 +48,13 @@ diskutil list
 #IDE
 # custom IntelliJ IDEA properties
 #echo 'idea.case.sensitive.fs=true' >> ~/Library/Preferences/IntelliJIdea2019.3/idea.properties
+
+#RDE
+# create case senstive encrypted volume for workplace and cache
+# confugre docker
+toolbox update toolbox
+toolbox install rde
+#post config http....../RDE/Environment_Setup/#Environment_setup_validation
+rde env validate
+rde env setup ecr
+toolbox update rde
