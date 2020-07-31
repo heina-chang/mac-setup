@@ -20,8 +20,7 @@ xcode-select --install
 brew install rbenv libyaml libffi
 ruby-build 2.7.1 ~/.runtimes/Ruby27x
 
-#install java is skipped here please refer to doc
-#https://builderhub.corp.amazon.com/docs/brazil/cli-guide/setup-macos.html
+#install java is skipped here please refer to setup-macos.html and install from self service
   
 # NODE with chromedriver for web tests
 brew install nvm
