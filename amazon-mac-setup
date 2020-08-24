@@ -58,3 +58,13 @@ toolbox install rde
 rde env validate
 rde env setup ecr
 toolbox update rde
+
+
+brew tap amazon/amazon "ssh://git.amazon.com/pkg/HomebrewAmazon"
+brew update
+brew upgrade
+
+# Install NinjaDevSync
+brew install ninja-dev-sync
+
+
