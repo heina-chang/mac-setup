@@ -67,4 +67,4 @@ brew upgrade
 # Install NinjaDevSync
 brew install ninja-dev-sync
 
-
+brew install aws-sam-cli
