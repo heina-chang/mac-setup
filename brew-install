@@ -61,5 +61,5 @@ brew install bash-completion
 brew install docker-completion
 echo "[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion" >> ~/.bash_profile
 
-
+brew tap aws/tap
 brew install aws-sam-cli
